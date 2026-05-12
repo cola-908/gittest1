@@ -1,0 +1,277 @@
+{
+	"info": {
+		"title": "abc",
+		"description": "",
+		"version": "1.0.0"
+	},
+	"openapi": "3.0.0",
+	"servers": [
+		{
+			"url": "",
+			"description": "默认环境",
+			"variables": {}
+		},
+		{
+			"url": "http://10.18.8.110:8181/v2",
+			"description": "回归环境",
+			"variables": {}
+		},
+		{
+			"url": "http://127.0.0.1:52454/api/v1",
+			"description": "Agent",
+			"variables": {}
+		},
+		{
+			"url": "http://10.18.8.251:8181/v2",
+			"description": "HG",
+			"variables": {
+				"device_mac": {
+					"default": "",
+					"description": ""
+				},
+				"host_id": {
+					"default": "",
+					"description": ""
+				},
+				"r_uuid": {
+					"default": "",
+					"description": ""
+				},
+				"s_uuid": {
+					"default": "",
+					"description": ""
+				}
+			}
+		},
+		{
+			"url": "http://10.18.8.180:8181/v2",
+			"description": "VPN",
+			"variables": {}
+		},
+		{
+			"url": "http://10.18.8.77:8181/v2",
+			"description": "hyper-v",
+			"variables": {}
+		},
+		{
+			"url": "http://10.18.8.110:8181/v2",
+			"description": "aae4",
+			"variables": {}
+		},
+		{
+			"url": "http://10.18.8.174:8181",
+			"description": "hyhy",
+			"variables": {}
+		},
+		{
+			"url": "http://10.18.8.78:8181/v2",
+			"description": "冒烟QA",
+			"variables": {}
+		}
+	],
+	"paths": {
+		"/proxy/CentralizedBackup/devices": {
+			"get": {
+				"summary": "获取pc计算机设备列表",
+				"description": "",
+				"tags": [
+					"计算机/pc计算机"
+				],
+				"parameters": [
+					{
+						"name": "type",
+						"in": "query",
+						"description": "",
+						"required": true,
+						"example": "",
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "成功",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					},
+					"404": {
+						"description": "失败",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					}
+				}
+			}
+		},
+		"/proxy/CentralizedBackup/devices/50:28:4A:EA:83:CD": {
+			"post": {
+				"summary": "编辑pc设备名称",
+				"description": "",
+				"tags": [
+					"计算机/pc计算机"
+				],
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object"
+							},
+							"example": "{\r\n    \"alias\": \"Computer-她她她\"\r\n}"
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "成功",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					},
+					"404": {
+						"description": "失败",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"summary": "删除pc设备",
+				"description": "",
+				"tags": [
+					"计算机/pc计算机"
+				],
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "成功",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					},
+					"404": {
+						"description": "失败",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					}
+				}
+			}
+		},
+		"/proxy/CentralizedBackup/devices/50:28:4A:EA:83:CD/volumes": {
+			"get": {
+				"summary": "获取pc设备卷信息列表",
+				"description": "",
+				"tags": [
+					"计算机/pc计算机"
+				],
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "成功",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					},
+					"404": {
+						"description": "失败",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								},
+								"example": ""
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"tags": [
+		{
+			"name": "pc计算机",
+			"description": ""
+		},
+		{
+			"name": "计算机",
+			"description": ""
+		}
+	]
+}
